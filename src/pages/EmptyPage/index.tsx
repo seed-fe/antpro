@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Spin } from 'antd';
 import styles from './index.less';
 import TableDynamicSettings from './TableDynamicSettings';
+import ModalBasic from './ModalBasic';
 export default () => {
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -20,6 +21,7 @@ export default () => {
       >
         <Spin spinning={loading} size="large"></Spin>
       </div>
+      <ModalBasic />
       <TableDynamicSettings />
     </PageHeaderWrapper>
   );
